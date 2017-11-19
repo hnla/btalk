@@ -2,7 +2,7 @@
 /**
 * Sidebar Pages
 *
-* @package bp-progenitor
+* @package btalk-testering
 */
 if ( ! is_active_sidebar( 'sidebar-pages' ) ) {
 	return;

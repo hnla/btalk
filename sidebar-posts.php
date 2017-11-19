@@ -2,7 +2,7 @@
 /**
 * Sidebar Posts
 *
-* @package bp-progenitor
+* @package btal-testering
 */
 if ( ! is_active_sidebar( 'sidebar-posts' ) ) {
 	return;
