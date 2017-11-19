@@ -1,0 +1,47 @@
+// Loop flexbox layouts
+
+// These rules / properties need condencing and grouping!
+
+	.posts-loop-home {
+
+		@include build-flex-layout($basis: 33.3%);
+
+		@include medium-up() {
+			@include build-flex-layout($basis: 25%);
+		}
+
+		list-style: none;
+		margin: 0 -#{$pad-sml};
+		padding-left: 0 ;
+
+		li {
+			margin-bottom: $pad-med;
+		}
+		.box {
+			margin: 0 $pad-sml;
+
+				article {
+					background: #eee;
+					@include font-size(14);
+					padding:  $pad-sml;
+			}
+		}
+	}
+
+	.webinars-loop {
+
+		@include build-flex-layout($basis: 50%);
+
+		@include medium-up() {
+			@include build-flex-layout($basis: 33.3%, $row-wrap: nowrap);
+		}
+
+		list-style: none;
+		margin: 0 -#{$pad-sml};
+		padding-left: 0 ;
+
+		.box {
+			margin: 0 $pad-sml;
+		}
+	}
+

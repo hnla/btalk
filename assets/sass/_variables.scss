@@ -1,0 +1,47 @@
+
+// General scss variables
+// Spacing values - used primarilly for main elements to allow us
+// to adjust values in a grouped manner.
+
+$pad-xsml: 0.3em !default;
+$pad-sml:  0.5em !default;
+$pad-med:  1em !default;
+$pad-lrg:  2em !default;
+$pad-xlrg: 4em !default;
+
+$marg-xsml: 5px !default;
+$marg-sml:  10px !default;
+$marg-med:  15px !default;
+$marg-lrg:  20px !default;
+$marg-xlrg: 30px !default;
+
+// primary site element sizing
+
+$size__site-main:         100%;
+$size__site-sidebar:      25%;
+$size__footer-height:     4rem;
+$size__top-bar:           100px;
+$size__content-max-width: 60em;
+
+// Colours
+
+$color__dark-grey:            #555 !default;
+$color__light-text:           #767676 !default; // lightest gray on #fff with 4.5:1 contrast ratio
+$color__light-text-plus:      #737373 !default; // $light-text on #fafafa background
+$color__primary-grey:         #ccc !default;
+$color__light-grey:           #eaeaea !default;
+$color__med-light-grey:       #d6d6d6 !default;
+$color__off-white:            #fafafa !default;
+$color__white:                #fff !default;
+$color__black:                #333 !default;
+$color__text-main:            #404040;
+$color__green:                #75D119;
+
+$buttons-background:   #ededed !default;
+$form-border-color:    $color__med-light-grey !default;
+$border-color:         $color__med-light-grey !default;
+$light-box-shadow:     #d2d2d2 !default;
+
+$font__main: "open_sansregular", "gill sans", geneva, "helvetica nue", sans-serif;
+$font__code: monaco, consolas, "andale mono", "dejavu sans mono", monospace;
+$font__pre: "courier 10 Pitch", courier, monospace;

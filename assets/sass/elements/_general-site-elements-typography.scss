@@ -1,0 +1,79 @@
+// General site wide elements & typography
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+
+	@include font-size(16);
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "open_sansbold", sans-serif;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: $font__pre;
+
+	@include font-size(15);
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font__code;
+
+	@include font-size(15);
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $form-border-color;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #eee;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}

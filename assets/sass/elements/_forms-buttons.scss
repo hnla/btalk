@@ -1,0 +1,75 @@
+// Forms
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+	border: 1px solid $form-border-color;
+
+	@include box-model();
+	padding: 0.2em;
+	width: 100%
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+	border-color: $color__dark-grey;
+
+	@include box-shadow( 0 0 5px $light-box-shadow);
+}
+
+.comments-area {
+	@include medium-up() {
+
+		margin: 0 auto;
+		max-width: $size__content-max-width;
+	}
+
+	p {
+		label {
+			display: block;
+		}
+	}
+}
+
+.comment-form-comment {
+
+}
+
+// Buttons & submits
+input[type="submit"],
+.float-button,
+button {
+	border: 1px solid $form-border-color;
+	border-radius: 4px;
+	color: $color__off-white;
+	padding: $pad-sml $pad-med;
+}
+
+input[type="submit"],
+.button {
+	background: $color__green;
+
+	&:focus,
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.float-button {
+	text-decoration: none;
+}
+
+	input[type="submit"],
+.float-button,
+.float-button:focus,
+.float-button:hover {
+	background: darken($color__green, 10%);
+}
+
+input[type="submit"],
+.float-button:focus,
+.float-button:hover {
+	color: $color__white;
+}

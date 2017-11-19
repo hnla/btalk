@@ -1,0 +1,90 @@
+@import "_variables";
+@import "_mixins";
+
+/*==============================================================
+Core site styles
+
+This file provides the main element styles for site.
+Modules, specific element styling classes etc
+
+1.0 - Normalize
+
+2.0 - Generic site wide & typography
+
+3.0 - Navigation
+
+4.0 - Element styling
+	4.1 - header
+	4.2 - conetnt main
+	4.3 - sidebar
+	4.4 - footer widgets
+	4.5 - footer
+
+5.0 - Modules: loops, flexbox layouts.
+
+6.0 - Posts and Pages
+ 6.1 - Global styles
+ 6.2 - Custom pages
+
+7.0 - Forms
+
+8.0 - Classes
+=================================================================*/
+
+
+/*--------------------------------------------------------------
+1.0 Normalize
+
+Include a copy of the normalize rulesets ( contentious! )
+https://necolas.github.io/normalize.css/
+--------------------------------------------------------------*/
+@import "_normalize";
+
+/*--------------------------------------------------------------
+2.0 Generic site wide
+
+Site elements & typography
+--------------------------------------------------------------*/
+@import "elements/_general-site-elements-typography";
+
+/*--------------------------------------------------------------
+3.0 Navigation
+
+All primary navigation & pagination
+--------------------------------------------------------------*/
+@import "elements/_navigation";
+
+/*--------------------------------------------------------------
+4.0 Element Styling
+
+All descendent elements in regions, i.e header, footer
+--------------------------------------------------------------*/
+@import "elements/_element-styles";
+
+/*--------------------------------------------------------------
+5.0 Modules
+
+loops, flexbox layouts.
+--------------------------------------------------------------*/
+@import "elements/_modules";
+
+/*--------------------------------------------------------------
+6.0 Post and Pages
+
+Post and pages global & custom screen styles
+--------------------------------------------------------------*/
+@import "posts-pages/_post-pages";
+
+/*--------------------------------------------------------------
+7.0 Forms
+
+Forms general , comments form etc
+--------------------------------------------------------------*/
+@import "elements/_forms-buttons";
+
+/*--------------------------------------------------------------
+8.0 Classes
+
+General site wide classes
+--------------------------------------------------------------*/
+@import "elements/_classes";

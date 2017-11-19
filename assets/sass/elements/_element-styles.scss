@@ -1,0 +1,88 @@
+// Element styles
+
+//	4.1 - header
+//	4.2 - content main
+//	4.3 - sidebar
+//	4.4 - footer widgets
+//	4.5 - footer
+
+/*--------------------------------------------------------------
+4.1 Header child elements
+
+All descendent elements in header
+--------------------------------------------------------------*/
+.header-background {
+	@include center-vert();
+
+	.site-branding {
+		@include box-item-size($basis: 100%);
+	}
+
+	.site-title,
+	.site-description,
+	.page-title {
+		text-align: center;
+	}
+}
+
+.site-title,
+.site-title a,
+.page-title {
+	@include responsive-font(48)
+	color: $color__white;
+	margin: 0.5em 0;
+	text-align: center;
+	text-decoration: none;
+}
+.page-title {
+	color: $color__off-white;
+
+	@include responsive-font(56);
+}
+
+.site-description {
+
+		@include responsive-font(28)
+		color: darken($color__white, 2%);
+}
+
+/*--------------------------------------------------------------
+4.2 Main content child elements
+
+All descendent elements in main content region - home pages etc
+--------------------------------------------------------------*/
+
+/*
+Home page (loggedin)
+*/
+
+.block-1 {
+	background: $color__off-white;
+	margin-top: $marg-sml;
+	padding: $pad-med;
+
+	@include  build-flex-layout($basis: auto, $grow: 1 );
+
+	@include medium-up() {
+
+		@include  build-flex-layout($basis: 50%, $grow: 0 );
+	}
+}
+
+/*--------------------------------------------------------------
+4.3 Sidebar child elements
+
+All descendent elements in sidebar
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4.4 footer widgets child elements
+
+All descendent elements in header
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4.5 Footer child elements
+
+All descendent elements in footer
+--------------------------------------------------------------*/

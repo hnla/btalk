@@ -1,0 +1,37 @@
+// Custom pages - named page.
+
+
+// Single post 'Webinar' category
+
+.single-post {
+
+	.content-area {
+		max-width: $size__content-max-width;
+		margin: 0 auto;
+	}
+
+	.webinar {
+
+
+		.site-main {
+
+			@include medium-up() {
+
+				@include flex-box-dir($flex-wrap: nowrap);
+				@include flex-align();
+
+				.post-block-1 {
+					@include box-item-size($basis: 70%);
+				}
+
+				.post-block-2 {
+					@include box-item-size($basis: 30%);
+
+					padding: 4em 0.5em 0 2em;
+				}
+
+
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+// Global posts & pages styles
+
+.single-post,
+.page {
+
+	@include medium-up() {
+		article {
+			margin: 0 auto;
+			max-width: $size__content-max-width;
+		}
+	}
+
+	.entry-title {
+
+		@include responsive-font(48);
+		margin: 0.5em 0 0;
+		color: $color__light-text-plus;
+
+		@include medium-up() {
+			color: lighten( $color__light-text-plus, 15%);
+		}
+	}
+}
+
+

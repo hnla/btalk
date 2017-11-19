@@ -1,0 +1,224 @@
+// Primary site elements
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+}
+
+body:not(.customize-partial-edit-shortcuts-shown) {
+	padding-top: 46px;
+
+	@include medium-up() {
+		padding-top: 32px;
+	}
+}
+
+body.no-adminbar {
+	padding-top: 0;
+}
+
+body {
+	height: 100%;
+}
+
+#site-wrap {
+	min-height: 100%;
+}
+
+@include clearfix-element("#site-wrap");
+
+//Padding for the regions directly adjacent
+//to the sticky footer to clear the neg drag back
+
+// If footer widgets are active pad them otherwise pad .site-content
+.site-content {
+	padding: 0 $pad-sml $size__footer-height;
+}
+
+body.footer-widgets-active {
+
+	.site-content {
+		padding: 0 $pad-sml $pad-sml;
+	}
+
+	.footer-widgets-wrap {
+		padding: $pad-sml $pad-sml $size__footer-height;
+		width: 100%;
+	}
+}
+
+.content-area,
+.top-bar {
+		@include  box-model();
+}
+
+/*===============================================
+1.1 - Header
+=================================================*/
+
+.top-bar {
+
+	@include  box-model();
+
+	@include flex-box-dir($flex-wrap: wrap);
+
+	@include medium-up() {
+		@include flex-box-dir($flex-wrap: nowrap);
+	}
+
+
+	@include flex-align($align: center);
+	background: $color__off-white;
+	border-bottom: 1px solid #eee;
+	min-height: $size__top-bar;
+	opacity: 0.9;
+	padding: 0 $pad-med;
+	position: fixed;
+	top: 46px;
+
+	@include medium-up() {
+		top: 32px;
+	}
+	width: 100%;
+	z-index: 500;
+
+	.main-navigation {
+
+		@include box-item-size($basis: 100%);
+		padding: 0;
+		width: auto;
+	}
+
+	.site-logo {
+
+		@include box-item-size($basis: 100%);
+	}
+
+	@include medium-up() {
+
+		.main-navigation {
+
+			@include box-item-size($basis: 40%);
+			padding: 0 $pad-med;
+		}
+
+		.site-logo {
+
+			@include box-item-size($basis: 60%);
+		}
+	}
+
+}
+
+
+
+.header-background {
+	margin-top: $size__top-bar;
+}
+
+.site-branding {
+	padding: $pad-sml $pad-med;
+
+	.site-title {
+		margin-top: 0;
+	}
+}
+
+/*===============================================
+1.2 - Content
+=================================================*/
+
+.site-main {
+	padding-bottom: $pad-med;
+}
+
+@include medium-up() {
+
+	.content-area {
+
+		margin: 0;
+		padding: 0 $pad-sml $pad-med;
+		width: $size__site-main;
+
+		.site-main {
+			margin: 0;
+		}
+	}
+
+	body.main-sidebar:not(.home-page),
+	body.post-sbar-active,
+	body.page-sbar-active:not(.page-template-page-fullwidth) {
+
+		.content-area {
+			float: left;
+			margin: 0 (-$size__site-sidebar) 0 0;
+			padding: 0 0 $pad-sml $pad-sml;
+
+			.site-main {
+				margin: 0 $size__site-sidebar 0 0;
+				padding-right: $pad-med;
+			}
+		}
+	}
+
+}
+
+/*======================================
+1.2.1 - Footer widget wrap
+========================================*/
+
+.footer-widgets-wrap {
+	min-height: 10rem;
+}
+
+/*===============================================
+1.3 - Sidebar
+=================================================*/
+.site-content .widget-area {
+	overflow: hidden;
+	padding: 0 $pad-sml;
+	width: auto;
+}
+
+.widget-area {
+
+	section {
+
+		> ul {
+			margin-left: 0;
+			padding-left: 1em;
+		}
+	}
+}
+
+
+@include medium-up() {
+
+	.site-content .widget-area {
+		padding: 0 $pad-sml 0 $pad-med;
+
+		float: right;
+		width: $size__site-sidebar;
+	}
+}
+
+/*===============================================
+1.4 - Footer
+=================================================*/
+
+.site-footer {
+	background: $color__white;
+	border-top: 1px solid $color__black;
+	height: $size__footer-height;
+	margin: -$size__footer-height auto 0;
+	padding: $pad-sml $pad-med 0;
+	position: relative;
+	width: auto;
+	z-index: 1000;
+}
+
+.site-info {
+
+	@include font-size(14);
+}
+
